@@ -34,7 +34,7 @@
         "Mayunfeng\\LaravelFeishu\\ServiceProvider"
       ],
       "aliases": {
-        "EasyFeishu": "Mayunfeng\\LaravelFeishu\\Facade"
+        "LaravelFeishu": "EasyFeishu"
       }
     }
   }

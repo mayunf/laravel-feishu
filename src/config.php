@@ -42,8 +42,8 @@ return [
      */
     'open_platform' => [
         'default' => [
-            'app_id' => env('FEISHU_OPEN_PLATFORM_APPID', ''),
-            'secret' => env('FEISHU_OPEN_PLATFORM_SECRET', ''),
+            'app_id' => env('FEISHU_OPEN_PLATFORM_APP_ID', ''),
+            'app_secret' => env('FEISHU_OPEN_PLATFORM_APP_SECRET', ''),
             'encrypt_key' => env('FEISHU_OPEN_PLATFORM_ENCRYPT_KEY', ''),
             'verification_token' => env('FEISHU_OPEN_PLATFORM_VERIFICATION_TOKEN', ''),
         ],

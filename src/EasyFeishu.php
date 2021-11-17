@@ -3,7 +3,7 @@
 
 namespace Mayunfeng\LaravelFeishu;
 
-use Illuminate\Support\Facades\Facade as LaravelFacade;
+use Illuminate\Support\Facades\Facade;
 
 /**
  * @property \EasyFeishu\Contact\Contact $contact
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Facade as LaravelFacade;
  * @property \EasyFeishu\Im\Im $im
  * @see \EasyFeishu\Foundation\Application
  */
-class Facade extends LaravelFacade
+class EasyFeishu extends Facade
 {
 
     /**
