@@ -1,2 +1,2 @@
 # laravel-feishu
-飞书 SDK for Laravel / Lumen
+飞书 SDK for Laravel

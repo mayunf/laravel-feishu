@@ -1,0 +1,41 @@
+{
+  "name": "mayunfeng/laravel-feishu",
+  "description": "飞书 SDK for Laravel / Lumen",
+  "keywords": [
+    "laravel",
+    "feishu",
+    "larksuite",
+    "feishu-sdk",
+    "larksuite-sdk",
+    "sdk"
+  ],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "马运锋",
+      "email": "yunfeng0614@qq.com"
+    }
+  ],
+  "require": {
+    "mayunfeng/easy-feishu": "dev-develop"
+  },
+  "require-dev": {
+    "laravel/framework": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mayunfeng\\LaravelFeishu\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mayunfeng\\LaravelFeishu\\ServiceProvider"
+      ],
+      "aliases": {
+        "EasyFeishu": "Mayunfeng\\LaravelFeishu\\Facade"
+      }
+    }
+  }
+}
