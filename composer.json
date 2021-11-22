@@ -1,6 +1,6 @@
 {
   "name": "mayunfeng/laravel-feishu",
-  "description": "飞书 SDK for Laravel / Lumen",
+  "description": "飞书 SDK for Laravel",
   "keywords": [
     "laravel",
     "feishu",
@@ -17,9 +17,6 @@
       "email": "yunfeng0614@qq.com"
     }
   ],
-  "require": {
-    "mayunfeng/easy-feishu": "dev-develop"
-  },
   "require-dev": {
     "laravel/framework": "^6.0"
   },
@@ -34,8 +31,11 @@
         "Mayunfeng\\LaravelFeishu\\ServiceProvider"
       ],
       "aliases": {
-        "EasyFeishu": "Mayunfeng\\LaravelFeishu\\Facade"
+        "LaravelFeishu": "EasyFeishu"
       }
     }
+  },
+  "require": {
+    "mayunfeng/easy-feishu": "^1.0"
   }
 }

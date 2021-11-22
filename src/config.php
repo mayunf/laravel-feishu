@@ -32,8 +32,8 @@ return [
          * file：日志文件位置(绝对路径!!!)，要求可写权限
          */
         'log' => [
-            'level' => env('WECHAT_LOG_LEVEL', 'debug'),
-            'file' => env('WECHAT_LOG_FILE', storage_path('logs/wechat.log')),
+            'level' => env('FEISHU_LOG_LEVEL', 'debug'),
+            'file'  => env('FEISHU_LOG_FILE', storage_path('logs/feishu.log')),
         ],
     ],
 
@@ -42,9 +42,9 @@ return [
      */
     'open_platform' => [
         'default' => [
-            'app_id' => env('FEISHU_OPEN_PLATFORM_APPID', ''),
-            'secret' => env('FEISHU_OPEN_PLATFORM_SECRET', ''),
-            'encrypt_key' => env('FEISHU_OPEN_PLATFORM_ENCRYPT_KEY', ''),
+            'app_id'             => env('FEISHU_OPEN_PLATFORM_APP_ID', ''),
+            'app_secret'         => env('FEISHU_OPEN_PLATFORM_APP_SECRET', ''),
+            'encrypt_key'        => env('FEISHU_OPEN_PLATFORM_ENCRYPT_KEY', ''),
             'verification_token' => env('FEISHU_OPEN_PLATFORM_VERIFICATION_TOKEN', ''),
         ],
     ],
