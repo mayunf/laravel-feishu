@@ -1,19 +1,18 @@
 <?php
 
-
 namespace Mayunfeng\LaravelFeishu;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @property \EasyFeishu\Contact\Contact $contact
+ * @property \EasyFeishu\Contact\Contact         $contact
  * @property \EasyFeishu\AccessToken\AccessToken $access_token
- * @property \EasyFeishu\Im\Im $im
+ * @property \EasyFeishu\Im\Im                   $im
+ *
  * @see \EasyFeishu\Foundation\Application
  */
 class EasyFeishu extends Facade
 {
-
     /**
      * Get the registered name of the component.
      *
@@ -24,7 +23,6 @@ class EasyFeishu extends Facade
         return 'feishu.open_platform';
     }
 
-
     /**
      * @return \EasyFeishu\Foundation\Application
      */
@@ -32,5 +30,4 @@ class EasyFeishu extends Facade
     {
         return $name ? app('feishu.open_platform.'.$name) : app('feishu.open_platform');
     }
-
 }

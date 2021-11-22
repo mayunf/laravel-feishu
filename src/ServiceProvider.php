@@ -1,10 +1,9 @@
 <?php
 
-
 namespace Mayunfeng\LaravelFeishu;
 
-use Illuminate\Foundation\Application as LaravelApplication;
 use EasyFeishu\Foundation\Application as OpenPlatform;
+use Illuminate\Foundation\Application as LaravelApplication;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -45,7 +44,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
                 continue;
             }
 
-
             if (!empty(config('feishu.'.$name.'.app_id')) || !empty(config('feishu.'.$name.'.corp_id'))) {
                 $accounts = [
                     'default' => config('feishu.'.$name),
@@ -56,7 +54,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             }
 
             foreach ($accounts as $account => $config) {
-                $this->app->singleton("feishu.{$name}.{$account}", function ($laravelApp) use ($name, $account, $config, $class) {
+                $this->app->singleton("feishu.{$name}.{$account}", function ($laravelApp) use ($config, $class) {
                     $app = new $class(array_merge(config('feishu.defaults', []), $config));
                     if (config('feishu.defaults.use_laravel_cache')) {
                         $app['cache'] = $laravelApp['cache.store'];
@@ -73,5 +71,4 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             $this->app->alias('easyfeishu.'.$name, $class);
         }
     }
-
 }
